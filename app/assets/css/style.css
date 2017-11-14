@@ -13,13 +13,16 @@
   text-rendering: optimizeLegibility; }
 
 body {
-  font: 300 13px/1.6 'Helvetica Neue', Helvetica, Arial;
-  color: #444;
-  transition: all .4s .3s ease-in; }
+  font-family: "din-2014-narrow", system, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #304984;
+  transition: all .4s .3s ease-in;
+  background-color: #FCD6D6; }
 
-body, html {
-  min-height: 100vh;
-  overflow: hidden; }
+input, button {
+  box-shadow: none !important;
+  outline: none; }
 
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -413,6 +416,293 @@ textarea {
   background: #333;
   color: #fff;
   text-shadow: none; }
+
+a {
+  text-decoration: none;
+  color: #304984; }
+
+nav {
+  line-height: 0.8; }
+  nav > div {
+    position: fixed;
+    z-index: 99; }
+  nav #rsvp {
+    top: 5vw;
+    left: 5vw; }
+    nav #rsvp a {
+      display: block;
+      background: #fff;
+      border: 3px solid #304984;
+      padding: 20px; }
+      nav #rsvp a:hover {
+        background: #FF6446;
+        color: #fff;
+        border-color: #fff; }
+      @media (max-width: 800px) {
+        nav #rsvp a {
+          padding: 10px; } }
+  nav #location {
+    top: 5vw;
+    right: 5vw; }
+    nav #location a, nav #location a:active, nav #location a:visited {
+      display: inline-block;
+      position: relative;
+      line-height: 1.6; }
+      nav #location a:after, nav #location a:active:after, nav #location a:visited:after {
+        position: absolute;
+        width: 100%;
+        content: "";
+        display: block;
+        border-bottom: 3px solid #304984;
+        bottom: 0; }
+      nav #location a:hover:after, nav #location a:active:hover:after, nav #location a:visited:hover:after {
+        border-color: #FF6446; }
+    @media (max-width: 800px) {
+      nav #location {
+        display: none; } }
+    nav #location #map-locator {
+      width: 26px;
+      display: inline-block;
+      vertical-align: bottom;
+      margin-bottom: -2px;
+      margin-right: 5px; }
+    nav #location a {
+      vertical-align: bottom;
+      display: inline-block; }
+  nav #date {
+    bottom: 5vw;
+    left: 5vw; }
+    nav #date a, nav #date a:active, nav #date a:visited {
+      display: inline-block;
+      position: relative;
+      line-height: 1.6; }
+      nav #date a:after, nav #date a:active:after, nav #date a:visited:after {
+        position: absolute;
+        width: 100%;
+        content: "";
+        display: block;
+        border-bottom: 3px solid #304984;
+        bottom: 0; }
+      nav #date a:hover:after, nav #date a:active:hover:after, nav #date a:visited:hover:after {
+        border-color: #FF6446; }
+    @media (max-width: 800px) {
+      nav #date {
+        display: none; } }
+  nav #gift-registry {
+    bottom: 5vw;
+    right: 5vw; }
+    @media (min-width: 799px) {
+      nav #gift-registry a, nav #gift-registry a:active, nav #gift-registry a:visited {
+        display: inline-block;
+        position: relative;
+        line-height: 1.6; }
+        nav #gift-registry a:after, nav #gift-registry a:active:after, nav #gift-registry a:visited:after {
+          position: absolute;
+          width: 100%;
+          content: "";
+          display: block;
+          border-bottom: 3px solid #304984;
+          bottom: 0; }
+        nav #gift-registry a:hover:after, nav #gift-registry a:active:hover:after, nav #gift-registry a:visited:hover:after {
+          border-color: #FF6446; } }
+    @media (max-width: 800px) {
+      nav #gift-registry a {
+        display: block;
+        background: #fff;
+        border: 3px solid #304984;
+        padding: 10px; }
+        nav #gift-registry a:hover {
+          background: #FF6446;
+          color: #fff;
+          border-color: #fff; } }
+
+article {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+  article > section {
+    height: 100vh;
+    width: 100vw; }
+    article > section div, article > section h1, article > section h2, article > section h3 {
+      font-size: 10vw;
+      font-weight: bold;
+      letter-spacing: .5vw;
+      margin: 1vw 0;
+      line-height: 1.2; }
+      @media (min-width: 799px) {
+        article > section div, article > section h1, article > section h2, article > section h3 {
+          font-size: 5vw; } }
+    article > section p {
+      font-size: 5vw;
+      text-transform: none;
+      letter-spacing: normal; }
+      @media (min-width: 799px) {
+        article > section p {
+          font-size: 1.6vw; } }
+    article > section a, article > section a:active, article > section a:visited {
+      display: inline-block;
+      position: relative; }
+      article > section a:after, article > section a:active:after, article > section a:visited:after {
+        content: "";
+        position: absolute;
+        display: block;
+        border-bottom: 0.5vw solid #304984;
+        bottom: 0;
+        width: 100%; }
+      article > section a:hover:after, article > section a:active:hover:after, article > section a:visited:hover:after {
+        border-color: #FF6446; }
+    article > section#intro #intro-wrapper {
+      width: 60%;
+      margin: 0 auto; }
+      @media (min-width: 799px) {
+        article > section#intro #intro-wrapper {
+          width: 25%; } }
+      article > section#intro #intro-wrapper svg {
+        vertical-align: top; }
+      article > section#intro #intro-wrapper svg:nth-of-type(2) {
+        display: none; }
+      article > section#intro #intro-wrapper:hover svg:nth-of-type(2) {
+        display: block; }
+      article > section#intro #intro-wrapper:hover svg:nth-of-type(1) {
+        display: none; }
+    article > section#invitation {
+      width: 90%;
+      text-align: center;
+      margin: 0 auto;
+      line-height: 1;
+      letter-spacing: .1vw; }
+      @media (min-width: 799px) {
+        article > section#invitation {
+          width: 80%; } }
+      article > section#invitation h2, article > section#invitation p {
+        margin: 0; }
+      article > section#invitation a {
+        line-height: 1.6; }
+        article > section#invitation a:after {
+          border-bottom: 0.25vw solid #304984; }
+        article > section#invitation a:hover:after {
+          border-color: #FF6446; }
+    article > section#ideas {
+      width: 80%;
+      text-align: center;
+      margin: 0 auto;
+      line-height: 1;
+      letter-spacing: .1vw; }
+    article > section#our-story {
+      width: 80%;
+      text-align: center;
+      margin: 0 auto;
+      line-height: 1;
+      letter-spacing: .1vw; }
+
+#rsvp-form {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 5vw;
+  bottom: 5vw;
+  left: 5vw;
+  right: 5vw;
+  background: #fff;
+  border: 0.25vw solid #304984; }
+  #rsvp-form .success, #rsvp-form .fail {
+    display: none;
+    width: 80%;
+    margin: 30% auto;
+    text-align: center; }
+  #rsvp-form form {
+    width: 80%;
+    margin: 40% auto 0; }
+    @media (min-width: 799px) {
+      #rsvp-form form {
+        width: 55%;
+        margin: 20% auto; } }
+    #rsvp-form form > div.field {
+      border-bottom: 3px solid #304984;
+      margin-bottom: 25%; }
+      @media (min-width: 799px) {
+        #rsvp-form form > div.field {
+          margin-bottom: 10%; } }
+      #rsvp-form form > div.field > span {
+        display: block;
+        float: left; }
+      #rsvp-form form > div.field div.input {
+        width: 100%;
+        display: block;
+        outline: none;
+        cursor: text !important;
+        text-align: right;
+        color: #FF6446; }
+      #rsvp-form form > div.field:nth-of-type(n) div.input {
+        padding-left: 50px; }
+      #rsvp-form form > div.field:nth-of-type(3) div.input {
+        padding-left: 150px; }
+    #rsvp-form form > div.buttons {
+      text-align: center; }
+      #rsvp-form form > div.buttons button {
+        text-align: center;
+        display: inline-block;
+        background: #fff;
+        border: 3px solid #304984;
+        padding: 1.6vw;
+        width: 100px;
+        border-radius: 0;
+        color: #304984; }
+        #rsvp-form form > div.buttons button:first-of-type {
+          margin-right: 2vw; }
+        #rsvp-form form > div.buttons button:hover {
+          background: #FF6446;
+          color: #fff;
+          border-color: #fff; }
+  #rsvp-form .close {
+    position: absolute;
+    top: 5vw;
+    right: 5vw;
+    width: 4vw;
+    height: 4vw;
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer; }
+    @media (min-width: 799px) {
+      #rsvp-form .close {
+        top: 2.5vw;
+        right: 2.5vw; } }
+    #rsvp-form .close:before, #rsvp-form .close:after {
+      right: 0;
+      bottom: 0;
+      background-color: #304984;
+      content: " ";
+      display: block;
+      position: absolute;
+      width: 32px;
+      height: 2px; }
+      @media (min-width: 799px) {
+        #rsvp-form .close:before, #rsvp-form .close:after {
+          width: 4vw;
+          height: .25vw;
+          top: 50%;
+          bottom: auto; } }
+    #rsvp-form .close:before {
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg); }
+    #rsvp-form .close:after {
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+
+#rolled {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8); }
+  #rolled .video {
+    width: 100%;
+    height: 100%; }
 
 /* Example media query selectors */
 @media print {

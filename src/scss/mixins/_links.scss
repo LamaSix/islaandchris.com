@@ -1,0 +1,22 @@
+@mixin nav-styled-links {
+  a, a:active, a:visited {
+    display: inline-block;
+    position: relative;
+    line-height: 1.6;
+
+    &:after {
+      position:absolute;
+      width: 100%;
+      content: "";
+      display: block;
+      border-bottom: 3px solid $primary;
+      bottom: 0;
+    }
+
+    &:hover {
+      &:after {
+        border-color: $hover;
+      }
+    }
+  }
+}

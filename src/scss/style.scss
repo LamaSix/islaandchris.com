@@ -3,6 +3,8 @@
 //----------------------------------*/
 
 @import 'mixins/_position.scss';
+@import 'mixins/_links.scss';
+@import 'mixins/_text.scss';
 
 //----------------------------------*\
 // CONFIG MODULES
@@ -13,14 +15,6 @@
 @import 'modules/_clearfix.scss';
 @import 'modules/_defaults.scss';
 @import 'modules/_normalize.scss';
-//----------------------------------*\
-// PARTIALS
-//----------------------------------*/
-
-@import 'partials/_header.scss';
-@import 'partials/_nav.scss';
-@import 'partials/_main.scss';
-@import 'partials/_footer.scss';
 
 //----------------------------------*\
 // OBJECTS & MODULES

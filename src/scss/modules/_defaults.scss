@@ -7,11 +7,19 @@ html {
 }
 
 body {
-  font: 300 13px/1.6 'Helvetica Neue', Helvetica, Arial;
-  color: #444;
+  font-family: "din-2014-narrow", system, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $primary;
   transition: all .4s .3s ease-in;
+  background-color: $bg;
 }
 body,html{
-	min-height: 100vh;
-	overflow: hidden;
+}
+
+input, button {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline: none;
 }
