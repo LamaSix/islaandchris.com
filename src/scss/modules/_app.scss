@@ -17,7 +17,7 @@ nav {
       display: block;
       background: #fff;
       border: 3px solid $primary;
-      padding: 20px;
+      padding: 15px 20px;
 
       &:hover {
         background: $hover;
@@ -27,6 +27,8 @@ nav {
 
       @media (max-width: $sm-max-width) {
         padding: 10px;
+        border: 2px solid $primary;
+
       }
     }
   }
@@ -44,7 +46,7 @@ nav {
       width: 26px;
       display: inline-block;
       vertical-align: bottom;
-      margin-bottom: -2px;
+      margin-bottom: -5px;
       margin-right: 5px;
     }
 
@@ -75,7 +77,7 @@ nav {
       a {
         display: block;
         background: #fff;
-        border: 3px solid $primary;
+        border: 2px solid $primary;
         padding: 10px;
 
         &:hover {
@@ -127,9 +129,13 @@ article {
         content: "";
         position: absolute;
         display: block;
-        border-bottom: .5vw solid $primary;
-        bottom: 0;
+        border-bottom: 2px solid $primary;
+        bottom: 2px;
         width: 100%;
+        @media (min-width: $sm-min-width) {
+          bottom: 6px;
+          border-bottom: 3px solid $primary;
+        }
       }
 
       &:hover {
@@ -182,10 +188,17 @@ article {
         margin: 0;
       }
 
+      h2 {
+        margin-bottom: 10px;
+      }
+
       a {
-        line-height: 1.6;
+        line-height: 1.4;
         &:after {
-          border-bottom: 0.25vw solid $primary;
+          border-bottom: 2px solid $primary;
+          @media (min-width: $sm-min-width) {
+            border-bottom: 3px solid $primary;
+          }
         }
         &:hover {
           &:after {
@@ -221,7 +234,12 @@ article {
   left:$nav-margin;
   right:$nav-margin;
   background: #fff;
-  border: .25vw solid $primary;
+  border: 2px solid $primary;
+  overflow: scroll;
+
+  @media (min-width: $sm-min-width) {
+    border: 3px solid $primary;
+  }
 
   .success, .fail {
     display: none;
@@ -233,6 +251,7 @@ article {
   form {
     width: 80%;
     margin: 40% auto 0;
+    text-transform: none;
 
     @media (min-width: $sm-min-width) {
       width: 55%;
@@ -240,11 +259,12 @@ article {
     }
 
     > div.field {
-      border-bottom: 3px solid $primary;
+      border-bottom: 2px solid $primary;
       margin-bottom: 25%;
 
       @media (min-width: $sm-min-width) {
         margin-bottom: 10%;
+        border-bottom: 3px solid $primary;
       }
 
       > span {
@@ -257,30 +277,33 @@ article {
         display: block;
         outline: none;
         cursor: text !important;
-        text-align: right;
+        text-align: left;
         color: $hover;
-      }
-
-      &:nth-of-type(n) div.input {
-        padding-left: 50px;
-      }
-      &:nth-of-type(3) div.input {
-        padding-left: 150px;
       }
     }
 
     > div.buttons {
       text-align: center;
 
+      @media (min-width: $sm-min-width) {
+        margin-top: 100px;
+      }
+
       button {
         text-align: center;
         display: inline-block;
         background: #fff;
-        border: 3px solid $primary;
+        border: 2px solid $primary;
         padding: 1.6vw;
         width: 100px;
         border-radius: 0;
         color: $primary;
+        text-transform: uppercase;
+
+        @media (min-width: $sm-min-width) {
+          border: 3px solid $primary;
+          padding: 10px 20px;
+        }
 
         &:first-of-type {
           margin-right: 2vw;
@@ -299,8 +322,8 @@ article {
     position: absolute;
     top: $nav-margin;
     right: $nav-margin;
-    width:4vw;
-    height:4vw;
+    width:3vw;
+    height:3vw;
     outline: none;
     background: none;
     border: none;
@@ -318,12 +341,11 @@ article {
       content: " ";
       display: block;
       position: absolute;
-      width: 32px;
+      width: 26px;
       height: 2px;
 
       @media (min-width: $sm-min-width) {
-        width: 4vw;
-        height: .25vw;
+        height: 3px;
         top:50%;
         bottom: auto;
       }

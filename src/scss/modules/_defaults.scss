@@ -23,3 +23,8 @@ input, button {
   box-shadow: none !important;
   outline: none;
 }
+
+[contentEditable=true]:empty:not(:focus):before {
+    content: attr(data-text);
+    color: $primary;
+}

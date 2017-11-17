@@ -24,6 +24,10 @@ input, button {
   box-shadow: none !important;
   outline: none; }
 
+[contentEditable=true]:empty:not(:focus):before {
+  content: attr(data-text);
+  color: #304984; }
+
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -433,14 +437,15 @@ nav {
       display: block;
       background: #fff;
       border: 3px solid #304984;
-      padding: 20px; }
+      padding: 15px 20px; }
       nav #rsvp a:hover {
         background: #FF6446;
         color: #fff;
         border-color: #fff; }
       @media (max-width: 800px) {
         nav #rsvp a {
-          padding: 10px; } }
+          padding: 10px;
+          border: 2px solid #304984; } }
   nav #location {
     top: 5vw;
     right: 5vw; }
@@ -464,7 +469,7 @@ nav {
       width: 26px;
       display: inline-block;
       vertical-align: bottom;
-      margin-bottom: -2px;
+      margin-bottom: -5px;
       margin-right: 5px; }
     nav #location a {
       vertical-align: bottom;
@@ -509,7 +514,7 @@ nav {
       nav #gift-registry a {
         display: block;
         background: #fff;
-        border: 3px solid #304984;
+        border: 2px solid #304984;
         padding: 10px; }
         nav #gift-registry a:hover {
           background: #FF6446;
@@ -548,9 +553,13 @@ article {
         content: "";
         position: absolute;
         display: block;
-        border-bottom: 0.5vw solid #304984;
-        bottom: 0;
+        border-bottom: 2px solid #304984;
+        bottom: 2px;
         width: 100%; }
+        @media (min-width: 799px) {
+          article > section a:after, article > section a:active:after, article > section a:visited:after {
+            bottom: 6px;
+            border-bottom: 3px solid #304984; } }
       article > section a:hover:after, article > section a:active:hover:after, article > section a:visited:hover:after {
         border-color: #FF6446; }
     article > section#intro #intro-wrapper {
@@ -578,10 +587,15 @@ article {
           width: 80%; } }
       article > section#invitation h2, article > section#invitation p {
         margin: 0; }
+      article > section#invitation h2 {
+        margin-bottom: 10px; }
       article > section#invitation a {
-        line-height: 1.6; }
+        line-height: 1.4; }
         article > section#invitation a:after {
-          border-bottom: 0.25vw solid #304984; }
+          border-bottom: 2px solid #304984; }
+          @media (min-width: 799px) {
+            article > section#invitation a:after {
+              border-bottom: 3px solid #304984; } }
         article > section#invitation a:hover:after {
           border-color: #FF6446; }
     article > section#ideas {
@@ -606,7 +620,11 @@ article {
   left: 5vw;
   right: 5vw;
   background: #fff;
-  border: 0.25vw solid #304984; }
+  border: 2px solid #304984;
+  overflow: scroll; }
+  @media (min-width: 799px) {
+    #rsvp-form {
+      border: 3px solid #304984; } }
   #rsvp-form .success, #rsvp-form .fail {
     display: none;
     width: 80%;
@@ -614,17 +632,19 @@ article {
     text-align: center; }
   #rsvp-form form {
     width: 80%;
-    margin: 40% auto 0; }
+    margin: 40% auto 0;
+    text-transform: none; }
     @media (min-width: 799px) {
       #rsvp-form form {
         width: 55%;
         margin: 20% auto; } }
     #rsvp-form form > div.field {
-      border-bottom: 3px solid #304984;
+      border-bottom: 2px solid #304984;
       margin-bottom: 25%; }
       @media (min-width: 799px) {
         #rsvp-form form > div.field {
-          margin-bottom: 10%; } }
+          margin-bottom: 10%;
+          border-bottom: 3px solid #304984; } }
       #rsvp-form form > div.field > span {
         display: block;
         float: left; }
@@ -633,23 +653,27 @@ article {
         display: block;
         outline: none;
         cursor: text !important;
-        text-align: right;
+        text-align: left;
         color: #FF6446; }
-      #rsvp-form form > div.field:nth-of-type(n) div.input {
-        padding-left: 50px; }
-      #rsvp-form form > div.field:nth-of-type(3) div.input {
-        padding-left: 150px; }
     #rsvp-form form > div.buttons {
       text-align: center; }
+      @media (min-width: 799px) {
+        #rsvp-form form > div.buttons {
+          margin-top: 100px; } }
       #rsvp-form form > div.buttons button {
         text-align: center;
         display: inline-block;
         background: #fff;
-        border: 3px solid #304984;
+        border: 2px solid #304984;
         padding: 1.6vw;
         width: 100px;
         border-radius: 0;
-        color: #304984; }
+        color: #304984;
+        text-transform: uppercase; }
+        @media (min-width: 799px) {
+          #rsvp-form form > div.buttons button {
+            border: 3px solid #304984;
+            padding: 10px 20px; } }
         #rsvp-form form > div.buttons button:first-of-type {
           margin-right: 2vw; }
         #rsvp-form form > div.buttons button:hover {
@@ -660,8 +684,8 @@ article {
     position: absolute;
     top: 5vw;
     right: 5vw;
-    width: 4vw;
-    height: 4vw;
+    width: 3vw;
+    height: 3vw;
     outline: none;
     background: none;
     border: none;
@@ -677,12 +701,11 @@ article {
       content: " ";
       display: block;
       position: absolute;
-      width: 32px;
+      width: 26px;
       height: 2px; }
       @media (min-width: 799px) {
         #rsvp-form .close:before, #rsvp-form .close:after {
-          width: 4vw;
-          height: .25vw;
+          height: 3px;
           top: 50%;
           bottom: auto; } }
     #rsvp-form .close:before {
