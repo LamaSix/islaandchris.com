@@ -194,10 +194,12 @@ article {
 
       a {
         line-height: 1.4;
+
         &:after {
           border-bottom: 2px solid $primary;
           @media (min-width: $sm-min-width) {
             border-bottom: 3px solid $primary;
+            bottom: 0;
           }
         }
         &:hover {

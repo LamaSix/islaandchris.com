@@ -595,7 +595,8 @@ article {
           border-bottom: 2px solid #304984; }
           @media (min-width: 799px) {
             article > section#invitation a:after {
-              border-bottom: 3px solid #304984; } }
+              border-bottom: 3px solid #304984;
+              bottom: 0; } }
         article > section#invitation a:hover:after {
           border-color: #FF6446; }
     article > section#ideas {
